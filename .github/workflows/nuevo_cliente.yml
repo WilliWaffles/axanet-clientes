@@ -1,0 +1,15 @@
+name: Nuevo cliente
+
+on:
+  workflow_dispatch:
+    inputs:
+      cliente:
+        description: "Nombre del nuevo cliente"
+        required: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notificar creación
+        run: echo "usuario1-dev y usuario2-op: se ha creado el cliente '${{ github.event.inputs.cliente }}'"
