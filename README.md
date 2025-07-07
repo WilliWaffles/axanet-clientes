@@ -15,7 +15,7 @@ Desarrollar una solución en Python capaz de:
 
 ---
 
-## 🛠Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - Python 3
 - Git + GitHub
