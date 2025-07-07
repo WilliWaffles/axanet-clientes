@@ -1,15 +1,17 @@
-name: Actualización de cliente
+name: Consulta de cliente
 
 on:
   workflow_dispatch:
     inputs:
       cliente:
-        description: "Nombre del cliente recurrente"
+        description: "Cliente consultado"
         required: true
+        default: "ClienteEjemplo"
 
 jobs:
-  notify:
+  notificar:
     runs-on: ubuntu-latest
     steps:
-      - name: Notificar actualización
-        run: echo "usuario1-dev y usuario2-op: se ha actualizado el cliente '${{ github.event.inputs.cliente }}'"
+      - name: Mostrar mensaje de consulta
+        run: |
+          echo "usuario1-dev y usuario2-op: se ha consultado el cliente '${{ github.event.inputs.cliente }}'"
